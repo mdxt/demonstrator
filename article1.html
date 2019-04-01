@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>article1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body,html{
+      height: 100%;
+      margin: 0;
+      color: #777;
+    }
+
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+      position: relative;
+      opacity: 1;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+    .bgimg-1 {
+      background-image: url("images/aurora-wallpaper-3.jpg");
+      height: 200px;
+    }
+    .scrollspy-example {
+      position: relative;
+      max-height: 550px;
+      overflow-y: scroll;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <div class="bgimg-1 jumbotron-fluid">
+  </div>
+  <div class="container-fluid my-3">
+    <div class="row">
+      <div class="col mx-auto w-100">
+        <h1 class="display-4 text-center m-3">Scrollspy in Bootstrap 4</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 mx-auto p-6">
+        <div id="list-example" class="list-group">
+        <a class="list-group-item list-group-item-action" href="#overview">Overview</a>
+        <a class="list-group-item list-group-item-action" href="#details">Details</a>
+        <a class="list-group-item list-group-item-action" href="#additional">Additional</a>
+        </div>
+      </div>
+      <div class="col-sm m-2">
+        <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+          <h2 id="overview">Overview</h2>
+          <p class="lead">
+            While scrolling through a long page of text, or anything with multiple sections, it is often hard to keep track of where you are.  <br><br>
+            That is where Scrollspy comes in. As hinted at by its name, it 'spies' on the scroll position of the page, and highlights an element in an unordered list that links to the current section of the page.  <br><br>
+            This unordered list is usually a nav or a list group. If you scroll down and up, you will see that you are actually learning about Scrollspy through Scrollspy. Very meta.  <br><br>
+            </p>
+          <h2 id="details">Details</h2>
+
+            <pre><code>
+    &lt;div id="list-example" class="list-group"&gt;
+    &lt;a class="list-group-item list-group-item-action" href="#overview"&gt;Overview&lt;/a&gt;
+    &lt;a class="list-group-item list-group-item-action" href="#details"&gt;Details&lt;/a&gt;
+    &lt;a class="list-group-item list-group-item-action" href="#additional"&gt;Additional&lt;/a&gt;
+    &lt;/div&gt;
+            </code></pre>
+
+          <p class="lead">
+            Above is the code for the list group you see on the left. You can see that we have specified links for each section of the main text.<br><br>
+            And finally, given below is the skeleton code for the section you are reading.<br><br>
+            </p>
+          <pre><code>
+    &lt;div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example"&gt;
+      &lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+      &lt;p class="lead"&gt;=  &lt;/p&gt;
+      &lt;h2 id="details"&gt;Details&lt;/h2&gt;
+        &lt;pre&gt;&lt;code&gt;
+        &lt;/code&gt;&lt;/pre&gt;
+      &lt;p class="lead"&gt;&lt;/p&gt;
+      &lt;p class="lead"&gt;&lt;/p&gt;
+      &lt;h2 id="additional"&gt;Additional&lt;/h2&gt;
+      &lt;p class="lead"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+          </code></pre>
+          <p class="lead">
+            Here, <code>data-spy="scroll"</code> is added to indicate that this div is to be spied upon, <code>data-target</code> specifies the list to be targeted, and
+            <code>data-offset</code> gives the number of pixels to offset from top when calculating position of scroll.<br><br>
+            Note that we added 'id's to the sections corresponding to the links in the list group.
+          </p>
+          <h2 id="additional">Additional</h2>
+          <p class="lead">
+            Please be careful to follow the following rules -<br>
+            Scrollspy must be used on a Bootstrap nav component or list group.<br>
+            Scrollspy requires <code>position: relative;</code> on the element you’re spying on, usually the <code>&lt;body&gt;</code>.<br>
+            When spying on elements other than the <code>&lt;body&gt;</code>, be sure to have a height set and <code>overflow-y: scroll;</code> applied.<br>
+            Anchors (<code>&lt;a&gt;</code>) are required and must point to an element with that id.<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron my-0">
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

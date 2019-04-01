@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>main</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+  body, html{
+    height: 100%;
+    margin: 0;
+    color: #777;
+  }
+
+  .bgimg-1, .bgimg-2 {
+    position: relative;
+    opacity: 1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  .bgimg-1 {
+    background-image: url("images/aurora-wallpaper-3.jpg");
+    min-height: 100%;
+  }
+
+  .bgimg-2 {
+    background-image: url("images/coding2.jpg");
+    min-height: 400px;
+  }
+
+  .caption {
+    position: absolute;
+    left: 0;
+    opacity: 0.8;
+    top: 80%;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+
+  .caption span.bold {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    border-radius: 18px;
+  }
+
+  /* Turn off parallax scrolling for tablets and phones */
+  @media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+      background-attachment: scroll;
+    }
+  }
+  </style>
+</head>
+<body>
+
+      <div class="bgimg-1 jumbotron-fluid">
+        <div class="caption">
+          <span class="bold">Hi there! &#8595;</span>
+        </div>
+      </div>
+
+      <div class="container-fluid bg-light text-dark p-5">
+        <div class="row">
+          <div class="mx-auto text-center">
+              <h1 class="display-4">Welcome to my webpage</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 mx-2 p-5">
+            <div class="card mx-auto" style="max-width: 15rem;min-width: 10rem">
+              <img class="card-img-top" src="images/maitreya.jpg" alt="Card image">
+              <div class="card-body">
+                <h4 class="card-title">Maitreya Dixit</h4>
+                <p class="card-text">B.Tech CS, 3rd Year<br>9406583696<br>maitreyadixit@gmail.com</p>
+                <a href="mailto:maitreyadixit@gmail.com" class="btn btn-primary">Send an email</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-7 mx-2 p-5">
+            <p class="text-center">
+              Everything you will see in these pages was written in less than three days, while juggling a full college schedule (9-6, including Saturday) and submissions, vivas etc.<br><br>
+              The intent here is to demonstrate that I can use Bootstrap 4 and Javascript, and if I were a full-time intern at your company, I could do much better stuff for you.<br><br>
+              Below, you will find a couple of pages I wrote to show the characteristics of certain Bootstrap components.<br><br>
+              Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non-numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum[d] exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bgimg-2">
+        <!-- <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+        </div> -->
+      </div>
+
+      <div style="position:relative;">
+        <div class="container-fluid bg-light text-dark p-5">
+          <div class="row">
+            <div class="col-sm m-2 p-5">
+
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Tutorial on Scrollspy</h4>
+                    <p class="card-text">This is a short explanation of the Scrollspy component of Bootstrap 4. Includes an example as well.</p>
+                    <a href="article1.html" class="card-link">Open</a>
+                    <a href="article1.html" class="card-link" target="_blank" rel="noopener noreferrer">Open in new tab</a>
+                  </div>
+                </div>
+
+            </div>
+            <div class="col-sm m-2 p-5">
+
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Javascript Canvas</h4>
+                  <p class="card-text">This is a report on a brief exploration of the Canvas API and its use in creating 2D games.</p>
+                  <a href="article2.html" class="card-link">Open</a>
+                  <a href="article2.html" class="card-link" target="_blank" rel="noopener noreferrer">Open in new tab</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bgimg-1 jumbotron-fluid">
+      </div>
+      <div class="jumbotron my-0">
+        <p>End of page, image credits -
+          <a href="http://paperlief.com/aurora-borealis/green-aurora-borealis-wallpaper-2.html">paperlief.com,</a>
+          <a href="http://www.startupist.com/2014/11/9-websites-to-help-you-learn-how-to-code/">startupist.com</a></p>
+      </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

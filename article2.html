@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>article2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body,html{
+      height: 100%;
+      margin: 0;
+      color: #777;
+    }
+
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+      position: relative;
+      opacity: 1;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+    .bgimg-1 {
+      background-image: url("images/aurora-wallpaper-3.jpg");
+      height: 200px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <div class="bgimg-1 jumbotron-fluid">
+  </div>
+  <div class="container-fluid my-3">
+    <div class="row">
+      <div class="col mx-auto w-100">
+        <h1 class="display-4 text-center m-3">Canvas in Javascript</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 mx-auto p-6" style="min-width:480px;">
+        <p class="lead">
+        So I was thinking about what to write to demonstrate Javascript. I have had to write a lot of code for regex and custom form validation
+        in the past, and I wanted to do something different for this page.<br><br>
+        On Saturday, I found the Canvas API, which allows us to draw graphics using Javascript and the <code>&lt;canvas&gt;</code> element.
+        Among other things, it can be used for animation, game graphics, data visualization, photo manipulation, and real-time video processing.<br><br>
+        Naturally, games interest me, so I found a <a target="_blank" rel="noopener noreferrer" href="http://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">
+        tutorial on MDN</a> on writing simple games. The end result of that tutorial was the following game (adapted for this webpage) - <br>
+        </p>
+        <p class="text-center">
+        <canvas id="myCanvas" class="border border-primary" width="480" height="320"></canvas><br>
+        <button type="button" class="btn btn-primary mx-auto" id="load1">Load</button><br><br>
+        </p>
+        <p class="lead">
+        I wanted to write something simple and in a similiar vein, so here is a version of Snake - <br>
+        </p>
+        <p class="text-center">
+        <canvas id="myCanvas2" class="border border-primary" width="480" height="320"></canvas><br>
+        <button type="button" class="btn btn-primary mx-auto" id="load2">Load</button><br><br>
+        </p>
+        <p class="lead">
+        Ofcourse, several improvements may be made to the implementaion given above. Some of them are - <br>
+        At every movement, only the starting and ending cells need to be rendered, because they are the only ones
+        that change. I did not do this because clearing a cell was leaving a slightly visible edge, which I was not sure
+        how to remove.<br>
+        From our representation of the snake, only those cells are actually needed which involve a change in direction.
+        There is a bug in my code for this representation, so it has not been included currently.
+      </div>
+    </div>
+  </div>
+<div class="jumbotron my-0">
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="./game.js"></script>
+<script src="./snake.js"></script>
+</body>
+</html>
